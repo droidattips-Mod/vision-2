@@ -22,14 +22,13 @@ export default function CategorySection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 min-[360px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
           {t.categories.list.map((cat) => {
             const style = CATEGORY_STYLES[cat.id];
             if (!style) return null;
             return (
-              <a
+              <article
                 key={cat.id}
-                href="#equipment"
                 className={`border rounded-xl p-4 flex flex-col gap-2 hover:shadow-md hover:-translate-y-0.5 transition-all group ${style.color}`}
               >
                 <div className="text-3xl mb-1">{style.emoji}</div>
@@ -50,19 +49,18 @@ export default function CategorySection() {
                     className="text-gray-400 shrink-0 group-hover:text-saudi-600 rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-all"
                   />
                 </div>
-              </a>
+              </article>
             );
           })}
         </div>
 
         <div className="text-center mt-8">
-          <a
-            href="#equipment"
+          <div
             className="inline-flex items-center gap-2 border border-saudi-700 text-saudi-800 px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-saudi-800 hover:text-white transition-all"
           >
             {t.categories.viewAll}{" "}
             <ArrowRight size={14} className="rtl:rotate-180" />
-          </a>
+          </div>
         </div>
       </div>
     </section>

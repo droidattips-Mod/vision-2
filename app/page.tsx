@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import CategorySection from "./components/CategorySection";
 import PopularItemsSection from "./components/PopularItemsSection";
 import OffersSection from "./components/OffersSection";
 import ServicesSection from "./components/ServicesSection";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
+        <CategorySection />
         <PopularItemsSection />
         <OffersSection />
         <ServicesSection />
