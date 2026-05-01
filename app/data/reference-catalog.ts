@@ -23,68 +23,68 @@ type LocalizedCatalog = {
 const EQUIPMENT_FALLBACK = "/images/placeholders/equipment-fallback.svg";
 const SERVICE_FALLBACK = "/images/placeholders/service-fallback.svg";
 
-// One image path per item — filenames match English equipment titles for easy manual replacement.
-// Both EN and AR locales reference these same paths (same photo serves both languages).
+// One SVG placeholder per card — filename matches the English equipment title.
+// Replace each SVG with the real photo when ready (keep the same filename or update the path here).
 const FORKLIFT_IMAGES = [
-  "/images/equipment/toyota-3-ton-diesel-forklift.jpg",
-  "/images/equipment/komatsu-5-ton-forklift.jpg",
-  "/images/equipment/linde-2-5-ton-electric-forklift.jpg",
-  "/images/equipment/toyota-3-ton-diesel-forklift-2.jpg",
+  "/images/equipment/Toyota-3-Ton-Diesel-Forklift.svg",
+  "/images/equipment/Komatsu-5-Ton-Forklift.svg",
+  "/images/equipment/Linde-2.5-Ton-Electric-Forklift.svg",
+  "/images/equipment/Toyota-3-Ton-Diesel-Forklift-2.svg",
 ] as const;
 
 const SCISSOR_LIFT_IMAGES = [
-  "/images/equipment/genie-12m-electric-scissor-lift.jpg",
-  "/images/equipment/jlg-18m-diesel-scissor-lift.jpg",
-  "/images/equipment/jlg-8m-electric-scissor-lift.jpg",
-  "/images/equipment/genie-12m-diesel-scissor-lift.jpg",
+  "/images/equipment/Genie-12m-Electric-Scissor-Lift.svg",
+  "/images/equipment/JLG-18m-Diesel-Scissor-Lift.svg",
+  "/images/equipment/JLG-8m-Electric-Scissor-Lift.svg",
+  "/images/equipment/Genie-12m-Diesel-Scissor-Lift.svg",
 ] as const;
 
 const CRANE_IMAGES = [
-  "/images/equipment/liebherr-100-ton-all-terrain.jpg",
-  "/images/equipment/tadano-50-ton-mobile-crane.jpg",
-  "/images/equipment/tadano-50-ton-mobile-crane-2.jpg",
-  "/images/equipment/kato-25-ton-mobile-crane.jpg",
+  "/images/equipment/Liebherr-100-Ton-All-Terrain.svg",
+  "/images/equipment/Tadano-50-Ton-Mobile-Crane.svg",
+  "/images/equipment/Tadano-50-Ton-Mobile-Crane-2.svg",
+  "/images/equipment/Kato-25-Ton-Mobile-Crane.svg",
 ] as const;
 
 const BOBCAT_IMAGES = [
-  "/images/equipment/bobcat-s450-small-projects.jpg",
-  "/images/equipment/bobcat-s450-skid-steer.jpg",
+  "/images/equipment/Bobcat-S450-Small-Projects.svg",
+  "/images/equipment/Bobcat-S450-Skid-Steer.svg",
 ] as const;
 
 const BACKHOE_IMAGES = [
-  "/images/equipment/cat-428-backhoe-loader.jpg",
-  "/images/equipment/3-5-ton-mini-excavator.jpg",
+  "/images/equipment/CAT-428-Backhoe-Loader.svg",
+  "/images/equipment/3.5-Ton-Mini-Excavator.svg",
 ] as const;
 
 const LOADER_IMAGES = [
-  "/images/equipment/cat-966h-wheel-loader.jpg",
-  "/images/equipment/3-ton-roller.jpg",
+  "/images/equipment/CAT-966H-Wheel-Loader.svg",
+  "/images/equipment/3-Ton-Roller.svg",
 ] as const;
 
 const TELEHANDLER_IMAGES = [
-  "/images/equipment/jcb-540-170-telehandler-dammam.jpg",
-  "/images/equipment/manitou-mt-x-1440.jpg",
-  "/images/equipment/10m-telehandler.jpg",
+  "/images/equipment/JCB-540-170-Telehandler-Dammam.svg",
+  "/images/equipment/Manitou-MT-X-1440.svg",
+  "/images/equipment/10m-Telehandler.svg",
 ] as const;
 
 const MAN_LIFT_IMAGES = [
-  "/images/equipment/genie-s65-telescopic-boom.jpg",
-  "/images/equipment/jlg-450aj-articulating-boom-dammam-jubail.jpg",
-  "/images/equipment/26m-boom-lift.jpg",
-  "/images/equipment/articulating-boom-lift-rental-dammam-jubail-khobar.jpg",
+  "/images/equipment/Genie-S65-Telescopic-Boom.svg",
+  "/images/equipment/JLG-450AJ-Articulating-Boom-Dammam-Jubail.svg",
+  "/images/equipment/26m-Boom-Lift.svg",
+  "/images/equipment/Articulating-Boom-Lift-Rental-Dammam-Jubail-Khobar-22-42m.svg",
 ] as const;
 
 const SERVICE_IMAGES = [
-  "/images/services/forklift-rental-dammam-riyadh.jpg",
-  "/images/services/forklifts-10ton-for-rent-dammam.jpg",
-  "/images/services/16m-scissor-lift-rental-dammam.jpg",
-  "/images/services/scissor-lift-rental.jpg",
-  "/images/services/3-ton-diesel-forklift.jpg",
-  "/images/services/mobile-crane-rental.jpg",
-  "/images/services/22m-telescopic-boom-lift.jpg",
-  "/images/services/bobcat-s450-skid-steer.jpg",
-  "/images/services/10-ton-flatbed-crane-rental-dammam.jpg",
-  "/images/services/1-6-ton-reach-truck-rental-jeddah-riyadh.jpg",
+  "/images/services/Forklift-Rental-Dammam-Riyadh.svg",
+  "/images/services/Forklifts-10Ton-For-Rent-Dammam.svg",
+  "/images/services/16m-Scissor-Lift-Rental-Dammam.svg",
+  "/images/services/Scissor-Lift-Rental.svg",
+  "/images/services/3-Ton-Diesel-Forklift.svg",
+  "/images/services/Mobile-Crane-Rental.svg",
+  "/images/services/22m-Telescopic-Boom-Lift.svg",
+  "/images/services/Bobcat-S450-Skid-Steer.svg",
+  "/images/services/10-Ton-Flatbed-Crane-Rental-Dammam.svg",
+  "/images/services/1.6-Ton-Reach-Truck-Rental-Jeddah-Riyadh.svg",
 ] as const;
 
 function createCards(
