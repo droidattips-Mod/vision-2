@@ -3,6 +3,7 @@ export const SITE = {
   companyFull: "Kingdom Vision Equipment Rental",
   companyShort: "Kingdom Vision",
   phoneDisplay: "+966 50 665 7680",
+  phoneDisplayAr: "+٩٦٦٥٠٦٦٥٧٦٨٠",
   phoneTel: "tel:+966506657680",
   email: "kingdomvision.rental@gmail.com",
   mailto: "mailto:kingdomvision.rental@gmail.com",

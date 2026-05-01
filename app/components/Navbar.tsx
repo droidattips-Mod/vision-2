@@ -12,7 +12,7 @@ import LanguageToggle from "./LanguageToggle";
 type NavItem = { key: string; label: string; href: string };
 
 export default function Navbar() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -69,7 +69,7 @@ export default function Navbar() {
             className="flex items-center gap-1 text-sm text-yellow-400 hover:text-yellow-300 transition-colors whitespace-nowrap"
           >
             <Phone size={14} className="shrink-0" />
-            <span className="hidden lg:inline">{SITE.phoneDisplay}</span>
+            <span className="hidden lg:inline" dir="ltr">{locale === "ar" ? SITE.phoneDisplayAr : SITE.phoneDisplay}</span>
           </a>
           <Link
             href="/#footer"
@@ -115,7 +115,7 @@ export default function Navbar() {
             className="flex items-center gap-2 py-1 text-yellow-400"
             onClick={() => setOpen(false)}
           >
-            <Phone size={14} /> {SITE.phoneDisplay}
+            <Phone size={14} /> <span dir="ltr">{locale === "ar" ? SITE.phoneDisplayAr : SITE.phoneDisplay}</span>
           </a>
           <div className="flex gap-2 pt-2">
             <Link

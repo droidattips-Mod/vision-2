@@ -9,7 +9,7 @@ import NextLink from "next/link";
 const socialIcons = [Globe, Share2, LinkIcon, ExternalLink] as const;
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   const columns = [
     t.footer.columns.equipment,
@@ -41,7 +41,7 @@ export default function Footer() {
                 href={SITE.phoneTel}
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
-                <Phone size={13} className="text-yellow-400 shrink-0" /> {SITE.phoneDisplay}
+                <Phone size={13} className="text-yellow-400 shrink-0" /> <span dir="ltr">{locale === "ar" ? SITE.phoneDisplayAr : SITE.phoneDisplay}</span>
               </a>
               <a
                 href={SITE.mailto}

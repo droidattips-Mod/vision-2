@@ -5,23 +5,26 @@ import { useLanguage } from "@/app/providers/LanguageProvider";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export default function ContactInfoSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const c = t.contactPage.info;
+  const phoneDisplay = locale === "ar" ? SITE.phoneDisplayAr : SITE.phoneDisplay;
 
   const cards = [
     {
       title: c.phone,
-      content: SITE.phoneDisplay,
+      content: phoneDisplay,
       href: SITE.phoneTel,
       icon: Phone,
       external: false,
+      ltr: true,
     },
     {
       title: c.whatsapp,
-      content: SITE.phoneDisplay,
+      content: phoneDisplay,
       href: SITE.whatsappHref,
       icon: MessageCircle,
       external: true,
+      ltr: true,
     },
     {
       title: c.email,
@@ -70,6 +73,7 @@ export default function ContactInfoSection() {
                   <a
                     href={card.href}
                     {...(card.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    {...("ltr" in card && card.ltr ? { dir: "ltr" } : {})}
                     className="text-sm text-saudi-700 hover:text-saudi-900 hover:underline whitespace-pre-line text-start flex-1"
                   >
                     {card.content}
