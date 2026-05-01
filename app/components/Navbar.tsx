@@ -39,8 +39,8 @@ export default function Navbar() {
 
   return (
     <header className="bg-saudi-800 text-white sticky top-0 z-50 shadow-lg border-b border-emerald-600/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-3">
-        <Link href="/" className="flex items-center gap-2 shrink-0 min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-3 overflow-hidden">
+        <Link href="/" className="flex flex-1 items-center gap-2 min-w-0">
           <Image
             src="/kingdom logo.png"
             alt={SITE.companyShort}
