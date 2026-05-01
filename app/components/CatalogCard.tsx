@@ -21,26 +21,38 @@ export default function CatalogCard({
   imageSizes = "(max-width: 359px) 100vw, (max-width: 767px) 50vw, (max-width: 1279px) 33vw, 25vw",
 }: CatalogCardProps) {
   const [currentImageSrc, setCurrentImageSrc] = useState(imageSrc);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     setCurrentImageSrc(imageSrc);
+    setImageError(false);
   }, [imageSrc]);
 
   return (
     <article className="overflow-hidden rounded-xl border border-emerald-100 bg-white shadow-sm transition-shadow hover:shadow-md">
       <div className="relative aspect-[4/3] w-full bg-gray-100">
-        <Image
-          src={currentImageSrc}
-          alt={title}
-          fill
-          sizes={imageSizes}
-          className="object-cover"
-          onError={() => {
-            if (currentImageSrc !== fallbackImageSrc) {
-              setCurrentImageSrc(fallbackImageSrc);
-            }
-          }}
-        />
+        {imageError ? (
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <span className="text-center text-xs font-medium leading-snug text-gray-400">
+              {title}
+            </span>
+          </div>
+        ) : (
+          <Image
+            src={currentImageSrc}
+            alt={title}
+            fill
+            sizes={imageSizes}
+            className="object-cover"
+            onError={() => {
+              if (currentImageSrc !== fallbackImageSrc) {
+                setCurrentImageSrc(fallbackImageSrc);
+              } else {
+                setImageError(true);
+              }
+            }}
+          />
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-3 text-start sm:p-4">

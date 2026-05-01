@@ -23,37 +23,68 @@ type LocalizedCatalog = {
 const EQUIPMENT_FALLBACK = "/images/placeholders/equipment-fallback.svg";
 const SERVICE_FALLBACK = "/images/placeholders/service-fallback.svg";
 
-const EQUIPMENT_IMAGES = {
-  forklifts: [
-    "/images/equipment/forklift-1.svg",
-    "/images/equipment/forklift-2.svg",
-  ],
-  scissorLifts: [
-    "/images/equipment/scissor-lift-1.svg",
-    "/images/equipment/scissor-lift-2.svg",
-  ],
-  cranes: ["/images/equipment/crane-1.svg", "/images/equipment/crane-2.svg"],
-  bobcats: ["/images/equipment/bobcat-1.svg"],
-  backhoes: [
-    "/images/equipment/backhoe-loader-1.svg",
-    "/images/equipment/excavator-1.svg",
-  ],
-  loaders: ["/images/equipment/loader-1.svg", "/images/equipment/roller-1.svg"],
-  telehandlers: [
-    "/images/equipment/telehandler-1.svg",
-    "/images/equipment/telehandler-2.svg",
-  ],
-  manLifts: [
-    "/images/equipment/boom-lift-1.svg",
-    "/images/equipment/boom-lift-2.svg",
-  ],
-} as const;
+// One image path per item — filenames match English equipment titles for easy manual replacement.
+// Both EN and AR locales reference these same paths (same photo serves both languages).
+const FORKLIFT_IMAGES = [
+  "/images/equipment/toyota-3-ton-diesel-forklift.jpg",
+  "/images/equipment/komatsu-5-ton-forklift.jpg",
+  "/images/equipment/linde-2-5-ton-electric-forklift.jpg",
+  "/images/equipment/toyota-3-ton-diesel-forklift-2.jpg",
+] as const;
+
+const SCISSOR_LIFT_IMAGES = [
+  "/images/equipment/genie-12m-electric-scissor-lift.jpg",
+  "/images/equipment/jlg-18m-diesel-scissor-lift.jpg",
+  "/images/equipment/jlg-8m-electric-scissor-lift.jpg",
+  "/images/equipment/genie-12m-diesel-scissor-lift.jpg",
+] as const;
+
+const CRANE_IMAGES = [
+  "/images/equipment/liebherr-100-ton-all-terrain.jpg",
+  "/images/equipment/tadano-50-ton-mobile-crane.jpg",
+  "/images/equipment/tadano-50-ton-mobile-crane-2.jpg",
+  "/images/equipment/kato-25-ton-mobile-crane.jpg",
+] as const;
+
+const BOBCAT_IMAGES = [
+  "/images/equipment/bobcat-s450-small-projects.jpg",
+  "/images/equipment/bobcat-s450-skid-steer.jpg",
+] as const;
+
+const BACKHOE_IMAGES = [
+  "/images/equipment/cat-428-backhoe-loader.jpg",
+  "/images/equipment/3-5-ton-mini-excavator.jpg",
+] as const;
+
+const LOADER_IMAGES = [
+  "/images/equipment/cat-966h-wheel-loader.jpg",
+  "/images/equipment/3-ton-roller.jpg",
+] as const;
+
+const TELEHANDLER_IMAGES = [
+  "/images/equipment/jcb-540-170-telehandler-dammam.jpg",
+  "/images/equipment/manitou-mt-x-1440.jpg",
+  "/images/equipment/10m-telehandler.jpg",
+] as const;
+
+const MAN_LIFT_IMAGES = [
+  "/images/equipment/genie-s65-telescopic-boom.jpg",
+  "/images/equipment/jlg-450aj-articulating-boom-dammam-jubail.jpg",
+  "/images/equipment/26m-boom-lift.jpg",
+  "/images/equipment/articulating-boom-lift-rental-dammam-jubail-khobar.jpg",
+] as const;
 
 const SERVICE_IMAGES = [
-  "/images/services/service-1.svg",
-  "/images/services/service-2.svg",
-  "/images/services/service-3.svg",
-  "/images/services/service-4.svg",
+  "/images/services/forklift-rental-dammam-riyadh.jpg",
+  "/images/services/forklifts-10ton-for-rent-dammam.jpg",
+  "/images/services/16m-scissor-lift-rental-dammam.jpg",
+  "/images/services/scissor-lift-rental.jpg",
+  "/images/services/3-ton-diesel-forklift.jpg",
+  "/images/services/mobile-crane-rental.jpg",
+  "/images/services/22m-telescopic-boom-lift.jpg",
+  "/images/services/bobcat-s450-skid-steer.jpg",
+  "/images/services/10-ton-flatbed-crane-rental-dammam.jpg",
+  "/images/services/1-6-ton-reach-truck-rental-jeddah-riyadh.jpg",
 ] as const;
 
 function createCards(
@@ -84,7 +115,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "رافعة شوكية لنيد 2.5 طن - كهرباء",
             "رافعة شوكية تويوتا 3 طن ديزل",
           ],
-          EQUIPMENT_IMAGES.forklifts,
+          FORKLIFT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -97,7 +128,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "سيزر لفت جي إل جي 8 متر",
             "سيزر لفت جيني 12 متر ديزل",
           ],
-          EQUIPMENT_IMAGES.scissorLifts,
+          SCISSOR_LIFT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -110,7 +141,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "كرين تادانو 50 طن",
             "كرين كاتو 25 طن",
           ],
-          EQUIPMENT_IMAGES.cranes,
+          CRANE_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -118,7 +149,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
         title: "البوبكات",
         cards: createCards(
           ["بوبكات S450 للمشاريع الصغيرة", "بوبكات S450"],
-          EQUIPMENT_IMAGES.bobcats,
+          BOBCAT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -126,7 +157,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
         title: "البوكلينات",
         cards: createCards(
           ["بوكلين كتربلر 428", "حفار صغير 3.5 طن"],
-          EQUIPMENT_IMAGES.backhoes,
+          BACKHOE_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -134,7 +165,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
         title: "الشيولات",
         cards: createCards(
           ["شيول كتربلر 966H للأيجار في الدمام", "رصاصة أسفلت 3 طن"],
-          EQUIPMENT_IMAGES.loaders,
+          LOADER_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -146,7 +177,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "تلهندلر مانيتو 14 متر",
             "جي سي بي تليهندر 17متر",
           ],
-          EQUIPMENT_IMAGES.telehandlers,
+          TELEHANDLER_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -159,7 +190,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "بوم لفت 26 متر",
             "رافعات ذراعية (مان لفت & بوم لفت)",
           ],
-          EQUIPMENT_IMAGES.manLifts,
+          MAN_LIFT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -196,7 +227,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "Linde 2.5 Ton Electric Forklift",
             "Toyota 3-Ton Diesel Forklift",
           ],
-          EQUIPMENT_IMAGES.forklifts,
+          FORKLIFT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -209,7 +240,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "JLG 8m Electric Scissor Lift",
             "Genie 12m Diesel Scissor Lift",
           ],
-          EQUIPMENT_IMAGES.scissorLifts,
+          SCISSOR_LIFT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -222,7 +253,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "Tadano 50-Ton Mobile Crane",
             "Kato 25-Ton Mobile Crane",
           ],
-          EQUIPMENT_IMAGES.cranes,
+          CRANE_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -230,7 +261,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
         title: "Bobcats",
         cards: createCards(
           ["Bobcat S450 for Small Projects", "Bobcat S450 Skid Steer"],
-          EQUIPMENT_IMAGES.bobcats,
+          BOBCAT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -238,7 +269,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
         title: "Backhoe Loaders",
         cards: createCards(
           ["CAT 428 Backhoe Loader", "3.5 Ton Mini Excavator"],
-          EQUIPMENT_IMAGES.backhoes,
+          BACKHOE_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -246,7 +277,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
         title: "Loaders",
         cards: createCards(
           ["CAT 966H Wheel Loader", "3 Ton Roller"],
-          EQUIPMENT_IMAGES.loaders,
+          LOADER_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -256,9 +287,9 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
           [
             "JCB 540-170 Telehandler in Dammam",
             "Manitou MT-X 1440",
-            "10m Te",
+            "10m Telehandler",
           ],
-          EQUIPMENT_IMAGES.telehandlers,
+          TELEHANDLER_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
@@ -271,7 +302,7 @@ export const REFERENCE_CATALOG: Record<Locale, LocalizedCatalog> = {
             "26m Boom Lift",
             "Articulating & Boom Lift Rental in Dammam, Jubail & Khobar | 22-42m",
           ],
-          EQUIPMENT_IMAGES.manLifts,
+          MAN_LIFT_IMAGES,
           EQUIPMENT_FALLBACK,
         ),
       },
