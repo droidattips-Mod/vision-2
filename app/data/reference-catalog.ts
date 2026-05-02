@@ -20,16 +20,16 @@ type LocalizedCatalog = {
   serviceCards: ReferenceCard[];
 };
 
-const EQUIPMENT_FALLBACK = "/images/placeholders/equipment-fallback.svg";
+const EQUIPMENT_FALLBACK = "/images/placeholders/equipment-fallback.jpg";
 const SERVICE_FALLBACK = "/images/placeholders/service-fallback.svg";
 
 // One SVG placeholder per card — filename matches the English equipment title.
 // Replace each SVG with the real photo when ready (keep the same filename or update the path here).
 const FORKLIFT_IMAGES = [
-  "/images/equipment/Toyota-3-Ton-Diesel-Forklift.svg",
-  "/images/equipment/Komatsu-5-Ton-Forklift.svg",
-  "/images/equipment/Linde-2.5-Ton-Electric-Forklift.svg",
-  "/images/equipment/Toyota-3-Ton-Diesel-Forklift-2.svg",
+  "/images/equipment/Toyota-3-Ton-Diesel-Forklift.jp",
+  "/images/equipment/Komatsu-5-Ton-Forklift.jpg",
+  "/images/equipment/Linde-2.5-Ton-Electric-Forklift.jpg",
+  "/images/equipment/Toyota-3-Ton-Diesel-Forklift-2.jpg",
 ] as const;
 
 const SCISSOR_LIFT_IMAGES = [
