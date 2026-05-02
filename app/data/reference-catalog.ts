@@ -26,9 +26,9 @@ const SERVICE_FALLBACK = "/images/placeholders/service-fallback.svg";
 // One SVG placeholder per card — filename matches the English equipment title.
 // Replace each SVG with the real photo when ready (keep the same filename or update the path here).
 const FORKLIFT_IMAGES = [
-  "/images/equipment/Toyota-3-Ton-Diesel-Forklift.jp",
+  "/images/equipment/Toyota-3-Ton-Diesel-Forklift.jpg",
   "/images/equipment/Komatsu-5-Ton-Forklift.jpg",
-  "/images/equipment/Linde-2.5-Ton-Electric-Fomrklift.jpg",
+  "/images/equipment/Linde-2.5-Ton-Electric-Forklift.jpg",
   "/images/equipment/Toyota-3-Ton-Diesel-Forklift-2.jpg",
 ] as const;
 
@@ -40,10 +40,10 @@ const SCISSOR_LIFT_IMAGES = [
 ] as const;
 
 const CRANE_IMAGES = [
-  "/images/equipment/Liebherr-100-Ton-All-Terrain.svg",
-  "/images/equipment/Tadano-50-Ton-Mobile-Crane.svg",
-  "/images/equipment/Tadano-50-Ton-Mobile-Crane-2.svg",
-  "/images/equipment/Kato-25-Ton-Mobile-Crane.svg",
+  "/images/equipment/Liebherr-100-Ton-All-Terrain.png",
+  "/images/equipment/Tadano-50-Ton-Mobile-Crane.webp",
+  "/images/equipment/Tadano-50-Ton-Mobile-Crane-2.jfif",
+  "/images/equipment/Kato-25-Ton-Mobile-Crane.jpg",
 ] as const;
 
 const BOBCAT_IMAGES = [
