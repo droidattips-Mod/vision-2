@@ -28,15 +28,15 @@ const SERVICE_FALLBACK = "/images/placeholders/service-fallback.svg";
 const FORKLIFT_IMAGES = [
   "/images/equipment/Toyota-3-Ton-Diesel-Forklift.jp",
   "/images/equipment/Komatsu-5-Ton-Forklift.jpg",
-  "/images/equipment/Linde-2.5-Ton-Electric-Forklift.jpg",
+  "/images/equipment/Linde-2.5-Ton-Electric-Fomrklift.jpg",
   "/images/equipment/Toyota-3-Ton-Diesel-Forklift-2.jpg",
 ] as const;
 
 const SCISSOR_LIFT_IMAGES = [
-  "/images/equipment/Genie-12m-Electric-Scissor-Lift.svg",
-  "/images/equipment/JLG-18m-Diesel-Scissor-Lift.svg",
-  "/images/equipment/JLG-8m-Electric-Scissor-Lift.svg",
-  "/images/equipment/Genie-12m-Diesel-Scissor-Lift.svg",
+  "/images/equipment/Genie-123m-Electric-Scissor-Lift.jpg",
+  "/images/equipment/JLG-18m-Diesel-Scissor-Lift.webp",
+  "/images/equipment/JLG-8m-Electric-Scissor-Lift.webp",
+  "/images/equipment/Genie-12m-Diesel-Scissor-Lift.jfif",
 ] as const;
 
 const CRANE_IMAGES = [
