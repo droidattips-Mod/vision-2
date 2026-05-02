@@ -42,7 +42,7 @@ const SCISSOR_LIFT_IMAGES = [
 const CRANE_IMAGES = [
   "/images/equipment/Liebherr-100-Ton-All-Terrain.png",
   "/images/equipment/Tadano-50-Ton-Mobile-Crane.webp",
-  "/images/equipment/Tadano-50-Ton-Mobile-Crane-2.jfif",
+  "/images/equipment/Tadano-50-Ton-Mobile-Crane-2.jpg",
   "/images/equipment/Kato-25-Ton-Mobile-Crane.jpg",
 ] as const;
 
