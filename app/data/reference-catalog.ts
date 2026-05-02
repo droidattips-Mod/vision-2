@@ -48,30 +48,30 @@ const CRANE_IMAGES = [
 
 const BOBCAT_IMAGES = [
   "/images/equipment/Bobcat-S450-Small-Projects.jpg",
-  "/images/equipment/Bobcat-S450-Skid-Steer.svg",
+  "/images/equipment/Bobcat-S450-Skid-Steer.jpg",
 ] as const;
 
 const BACKHOE_IMAGES = [
-  "/images/equipment/CAT-428-Backhoe-Loader.svg",
-  "/images/equipment/3.5-Ton-Mini-Excavator.svg",
+  "/images/equipment/CAT-428-Backhoe-Loader.jpg",
+  "/images/equipment/3.5-Ton-Mini-Excavator.webp",
 ] as const;
 
 const LOADER_IMAGES = [
-  "/images/equipment/CAT-966H-Wheel-Loader.svg",
-  "/images/equipment/3-Ton-Roller.svg",
+  "/images/equipment/CAT-966H-Wheel-Loader.webp",
+  "/images/equipment/3-Ton-Roller.png",
 ] as const;
 
 const TELEHANDLER_IMAGES = [
-  "/images/equipment/JCB-540-170-Telehandler-Dammam.svg",
-  "/images/equipment/Manitou-MT-X-1440.svg",
-  "/images/equipment/10m-Telehandler.svg",
+  "/images/equipment/JCB-540-170-Telehandler-Dammam.png",
+  "/images/equipment/Manitou-MT-X-1440.jpg",
+  "/images/equipment/10m-Telehandler.png",
 ] as const;
 
 const MAN_LIFT_IMAGES = [
-  "/images/equipment/Genie-S65-Telescopic-Boom.svg",
-  "/images/equipment/JLG-450AJ-Articulating-Boom-Dammam-Jubail.svg",
-  "/images/equipment/26m-Boom-Lift.svg",
-  "/images/equipment/Articulating-Boom-Lift-Rental-Dammam-Jubail-Khobar-22-42m.svg",
+  "/images/equipment/Genie-S65-Telescopic-Boom.jpg",
+  "/images/equipment/JLG-450AJ-Articulating-Boom-Dammam-Jubail.jpg",
+  "/images/equipment/26m-Boom-Lift.png",
+  "/images/equipment/Articulating-Boom-Lift-Rental-Dammam-Jubail-Khobar-22-42m.jpg",
 ] as const;
 
 const SERVICE_IMAGES = [
