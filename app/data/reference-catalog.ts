@@ -47,7 +47,7 @@ const CRANE_IMAGES = [
 ] as const;
 
 const BOBCAT_IMAGES = [
-  "/images/equipment/Bobcat-S450-Small-Projects.svg",
+  "/images/equipment/Bobcat-S450-Small-Projects.jfif",
   "/images/equipment/Bobcat-S450-Skid-Steer.svg",
 ] as const;
 
