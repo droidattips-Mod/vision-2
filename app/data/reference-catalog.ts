@@ -36,7 +36,7 @@ const SCISSOR_LIFT_IMAGES = [
   "/images/equipment/Genie-123m-Electric-Scissor-Lift.jpg",
   "/images/equipment/JLG-18m-Diesel-Scissor-Lift.webp",
   "/images/equipment/JLG-8m-Electric-Scissor-Lift.webp",
-  "/images/equipment/Genie-12m-Diesel-Scissor-Lift.jfif",
+  "/images/equipment/Genie-12m-Diesel-Scissor-Lift.webp",
 ] as const;
 
 const CRANE_IMAGES = [
